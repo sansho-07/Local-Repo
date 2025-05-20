@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e3e6ed 100%);
+    color: #232946;
+    margin: 0;
+    padding: 2.5rem 3rem;
+    min-height: 100vh;
+    letter-spacing: 0.01em;
+}
+
+h1 {
+    color: #3a3a7c;
+    margin-bottom: 1.2rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 2px 8px #e3e6ed;
+    border-bottom: 2px solid #b8c1ec;
+    padding-bottom: 0.4rem;
+}
+
+p {
+    margin: 0.7rem 0 1.2rem 0;
+    line-height: 1.7;
+    max-width: 700px;
+}
+
+ul {
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    background: #f4f6fb;
+    border-left: 4px solid #b8c1ec;
+    border-radius: 0 8px 8px 0;
+}
+
+li {
+    margin-bottom: 0.7rem;
+    position: relative;
+    padding-left: 1.2em;
+}
+
+li::before {
+    content: "•";
+    color: #3a3a7c;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    top: 0;
+}
+
+a {
+    color: #5f6caf;
+    text-decoration: underline dotted;
+    transition: color 0.2s, text-decoration 0.2s;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #232946;
+    text-decoration: underline solid;
+    background: #e3e6ed;
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+pre {
+    background: linear-gradient(90deg, #232946 60%, #393e6e 100%);
+    color: #f4f6fb;
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 12px rgba(35,41,70,0.08);
+    font-size: 1.05em;
+}
+
+code {
+    font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
+    font-size: 1em;
+    background: #e3e6ed;
+    color: #232946;
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+}
