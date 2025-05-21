@@ -14,6 +14,14 @@
         <li><a href="https://www.example.com">Example Link</a></li>
         <li><a href="https://github.com/sansho-07/first_repo">GitHub</a></li>
     </ul>
+    <p>New Features:</p>
+    <ul>
+        <li>Dark mode toggle</li>
+        <li>Responsive layout</li>
+        <li>Live time display</li>
+    </ul>
+    <button id="darkModeBtn">Toggle Dark Mode</button>
+    <p>Current Time: <span id="currentTime"></span></p>
     <p>Here is a simple JavaScript function:</p>
     <pre>
         <code>
@@ -25,6 +33,18 @@
     <script>
         function greet() {
             alert("Hello, welcome to my local repository!");
+            // Dark mode toggle
+        const btn = document.getElementById('darkModeBtn');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Live time display
+        function updateTime() {
+            document.getElementById('currentTime').textContent = new Date().toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
         }
         greet();
     </script>
