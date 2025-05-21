@@ -1,83 +1,194 @@
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e3e6ed 100%);
-    color: #232946;
-    margin: 0;
-    padding: 2.5rem 3rem;
-    min-height: 100vh;
-    letter-spacing: 0.01em;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e3e6ed 100%);
+  color: #232946;
+  margin: 0;
+  padding: 2.5rem 3rem;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+  transition: background 0.5s;
+  animation: fadeInBody 1s;
+}
+
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 h1 {
-    color: #3a3a7c;
-    margin-bottom: 1.2rem;
-    font-size: 2.5rem;
-    letter-spacing: 0.05em;
-    text-shadow: 1px 2px 8px #e3e6ed;
-    border-bottom: 2px solid #b8c1ec;
-    padding-bottom: 0.4rem;
+  color: #3a3a7c;
+  margin-bottom: 1.2rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 2px 8px #e3e6ed;
+  border-bottom: 2px solid #b8c1ec;
+  padding-bottom: 0.4rem;
+  animation: slideDown 0.7s;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 p {
-    margin: 0.7rem 0 1.2rem 0;
-    line-height: 1.7;
-    max-width: 700px;
+  margin: 0.7rem 0 1.2rem 0;
+  line-height: 1.7;
+  max-width: 700px;
+  animation: fadeInUp 0.8s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 ul {
-    padding-left: 2rem;
-    margin-bottom: 2rem;
-    background: #f4f6fb;
-    border-left: 4px solid #b8c1ec;
-    border-radius: 0 8px 8px 0;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  background: #f4f6fb;
+  border-left: 4px solid #b8c1ec;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 8px rgba(184, 193, 236, 0.08);
+  animation: fadeInUp 1s;
 }
 
 li {
-    margin-bottom: 0.7rem;
-    position: relative;
-    padding-left: 1.2em;
+  margin-bottom: 0.7rem;
+  position: relative;
+  padding-left: 1.2em;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #e3e6ed;
+  border-radius: 4px;
+  animation: pulse 0.4s;
+}
+
+@keyframes pulse {
+  0% {
+    background: #f4f6fb;
+  }
+  50% {
+    background: #e3e6ed;
+  }
+  100% {
+    background: #f4f6fb;
+  }
 }
 
 li::before {
-    content: "•";
-    color: #3a3a7c;
-    position: absolute;
-    left: 0;
-    font-size: 1.2em;
-    top: 0;
+  content: "•";
+  color: #3a3a7c;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  top: 0;
+  transition: color 0.3s;
+}
+
+li:hover::before {
+  color: #5f6caf;
 }
 
 a {
-    color: #5f6caf;
-    text-decoration: underline dotted;
-    transition: color 0.2s, text-decoration 0.2s;
-    font-weight: 500;
+  color: #5f6caf;
+  text-decoration: underline dotted;
+  transition: color 0.2s, text-decoration 0.2s, background 0.2s, box-shadow 0.2s;
+  font-weight: 500;
+  border-radius: 3px;
 }
 
 a:hover {
-    color: #232946;
-    text-decoration: underline solid;
-    background: #e3e6ed;
-    border-radius: 3px;
-    padding: 0 2px;
+  color: #232946;
+  text-decoration: underline solid;
+  background: #e3e6ed;
+  box-shadow: 0 2px 8px rgba(35, 41, 70, 0.08);
+  padding: 0 2px;
 }
 
 pre {
-    background: linear-gradient(90deg, #232946 60%, #393e6e 100%);
-    color: #f4f6fb;
-    padding: 1.2rem 1.5rem;
-    border-radius: 10px;
-    overflow-x: auto;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 12px rgba(35,41,70,0.08);
-    font-size: 1.05em;
+  background: linear-gradient(90deg, #232946 60%, #393e6e 100%);
+  color: #f4f6fb;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px rgba(35, 41, 70, 0.08);
+  font-size: 1.05em;
+  animation: fadeInCode 1.2s;
+}
+
+@keyframes fadeInCode {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 code {
-    font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
+  font-family: "Fira Mono", "Consolas", "Monaco", monospace;
+  font-size: 1em;
+  background: #e3e6ed;
+  color: #232946;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  transition: background 0.2s, color 0.2s;
+}
+
+code:hover {
+  background: #b8c1ec;
+  color: #232946;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 2rem 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  pre {
     font-size: 1em;
-    background: #e3e6ed;
-    color: #232946;
-    border-radius: 4px;
-    padding: 0.1em 0.4em;
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+    padding-bottom: 0.2rem;
+  }
+  p,
+  ul {
+    max-width: 100%;
+  }
+  pre {
+    font-size: 0.95em;
+    padding: 0.7rem 0.5rem;
+  }
 }
